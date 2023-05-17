@@ -1,5 +1,7 @@
 # this is a script that randomly chooses and deselects (which is sort of the same as selecting from) a currently selected batch - just select your objects or collection and then run it from the text editor
 
+# you can also do this with the Select -> Select Random tool and the ratio slider, but I needed it for a more specific edge case, so, here it is:
+
 
 
 
