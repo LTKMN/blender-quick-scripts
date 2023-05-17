@@ -1,0 +1,23 @@
+# this is a script that randomly chooses and deselects (which is sort of the same as selecting from) a currently selected batch - just select your objects or collection and then run it from the text editor
+
+
+
+
+import bpy
+import random
+
+# Get currently selected objects
+selected_objects = bpy.context.selected_objects
+
+# Calculate 25% of the total (you can change this number as needed)
+num_to_select = len(selected_objects) // 4
+
+# Shuffle the selected objects
+random.shuffle(selected_objects)
+
+# Deselect all objects
+bpy.ops.object.select_all(action='DESELECT')
+
+# Select the first 25%
+for obj in selected_objects[:num_to_select]:
+    obj.select_set(True)
